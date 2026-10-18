@@ -39,7 +39,17 @@ By leveraging an analytical, root-cause-oriented methodology, the platform was c
 | **Physical Constraints** | Unusable touch digitizer; all operations restricted to Fastboot, ADB, and micro-switches |
 
 ---
+---
 
+## Proof of Concept & System Verification
+
+The deployment and recovery were verified across physical hardware states, low-level host telemetry, and user-space package provisioning:
+
+| 1. Hardware Recovery (`tissot`) | 2. CLI Host Telemetry (`adb`) | 3. Provisioned User-Space |
+| :---: | :---: | :---: |
+| ![Lineage Recovery](poc-recovery.jpeg) | ![Host ADB Telemetry](poc-cli-verification.png) | ![De-Googled App Drawer](poc-degoogled-apps.png) |
+| *Active Slot B, `f2fs` wipe & ADB receiver initialization.* | *Host-side architecture validation via Android properties.* | *Hardened Android 13 environment with standalone FOSS packages.* |
+---
 ## 3. Engineering Challenges & Root Cause Analysis (RCA)
 
 ```
